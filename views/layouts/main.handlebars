@@ -42,15 +42,16 @@
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    {{!-- we need to tell this form (input and button) where to point, with an 'action'  --}}
+    <form class="form-inline my-2 my-lg-0" action="/" method="POST">
+      <input class="form-control mr-sm-2" type="search" placeholder="Look up Ticker" aria-label="Search" name="stock_ticker">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Look Up</button>
     </form>
   </div>
 </nav>
   <br>
      <div class= 'container'>
-       {{!-- This will pull in all pages to this template layouts page so everything will have same template  --}}
+       {{!-- This will pull in all pages to this spot (the body) in this template layouts page so everything will have same template  --}}
          {{{body}}}
     </div> 
     
