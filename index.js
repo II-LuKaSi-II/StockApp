@@ -22,6 +22,11 @@ app.get('/', function (req, res) {
     });
 });
 
+// Create about page route 
+app.get('/about.html', function (req, res) {
+    res.render('about');
+});
+
 //We have static webpage 'index.html' Now we need to create a path and a route to that page. 
 //That is done through the static folder 'public'
 //This is the only node 'routing' we need to do for all static pages. This is thanks to express js
