@@ -1,3 +1,5 @@
+//This is an app to teach me how to pull stock information (or any information) from an API.
+
 const express = require('express');
 const app = express();
 var exphbs  = require('express-handlebars');
@@ -11,6 +13,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 const otherstuff = 'This is just to show how we can pass variables into the handlebars routes to display it on the front end'
+
 //Set Handlebar routes
 app.get('/', function (req, res) {
     res.render('home', {
