@@ -42,20 +42,21 @@ app.get('/', function (req, res) {
             // We can put stuff in here on the backend that will then get routed though handlebars to our front end 
             stock: doneAPI
         });
-    });  
+    }, "fb");  
 });
 
 //Set Handlebar index POST routes. There are differnet types of routes like GET and POST
 app.post('/', function (req, res) {
     call_api(function(doneAPI) {
-        // this postedstuff variable uses the req from the function, the body fro the bodyParser and then the name of the input form.
-        // If there were multiple forms you would access them by calling them after body by the name you gave them. 
+            // this postedstuff variable uses the req from the function, the body fro the bodyParser and then the name of the input form.
+            // If there were multiple forms you would access them by calling them after body by the name you gave them. 
             //posted_stuff = req.body.stock_ticker; **this is how you access the parsed info from form. 
             res.render('home', {
             // We can put stuff in here on the backend that will then get routed though handlebars to our front end 
             stock: doneAPI,
         });
     }, req.body.stock_ticker);  
+     
 });
 
 // Create about page GET route 
