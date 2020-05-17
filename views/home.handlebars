@@ -1,3 +1,15 @@
-<h1>this is my actual webpage that will be pulled into the handlebars layout webpage </h1>
-<p>it pulls it in to the screen and outputs it whereever we put the body tag...I think</p>
-<p>{{stuff}}</p>
+<h1> {{ stock.companyName }} ({{ stock.symbol}}) </h1>
+<strong>Latest Price: </strong>${{ stock.latestPrice }} </br>
+<strong>Previous Close: </strong>${{ stock.previousClose }} </br>
+<strong>Percent Change: </strong>{{ stock.changePercent }}% </br>
+<strong>52 Week High: </strong>${{ stock.week52High }} </br>
+<strong>52 Week Low: </strong>${{ stock.week52Low }} </br>
+<strong>YTD Change: </strong>{{ stock.ytdChange }}% </br>
+<strong>Market Cap: </strong>${{ stock.marketCap }} </br>
+<strong>Daily Volume: </strong> {{ stock.volume }} </br>
+<strong>Average Total Volume: </strong> {{ stock.avgTotalVolume }} </br>
+
+{{!-- This will go through and display all key (key) value (this) pairs in the stock variable  --}}
+{{!-- {{#each stock}}
+    {{@key}} | {{this}}<br/>
+{{/each}}; --}}
